@@ -80,6 +80,21 @@
             height: 500px;
             border: none;
         }
+        .iframe-wrapper {
+    width: 100%;
+    height: 400px; /* Reduced height to fit the scaled content */
+    position: relative;
+        }
+
+        .visualization-iframe {
+            width: 100%;
+            height: 100%;
+            transform: scale(0.5); /* Scales down to 50% - adjust this value as needed */
+            transform-origin: top left; /* Ensures scaling starts from the top-left */
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -321,8 +336,9 @@
                 </p>
             </div>
             <div class="p-4">
-                <!-- Adjust the iframe size as needed -->
-                <iframe class="visualization-iframe" src="vis5.html" style="width:100%; height:600px; border:none;"></iframe>
+                <div class="iframe-wrapper">
+                    <iframe class="visualization-iframe" src="vis5.html" style="border: none;"></iframe>
+                </div>
             </div>
             <div class="p-6 bg-blue-50">
                 <h4 class="font-semibold text-blue-600 mb-2">Key Insights:</h4>
